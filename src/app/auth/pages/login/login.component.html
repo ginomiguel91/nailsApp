@@ -1,0 +1,56 @@
+<section class="hero is-light is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <figure class="image is-512x512">
+          <img src="./assets/nails.png" />
+        </figure>
+        <div class="column is-two-fifths">
+          <h3 class="title has-text-black">Sign in to NailsGestion</h3>
+
+          <hr class="login-hr" />
+          <p class="subtitle has-text-black">Please sign in to proceed.</p>
+          <form class="box" [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="field">
+              <label class="label">Username</label>
+              <div class="control">
+                <input
+                  [ngClass]="errorField('username')"
+                  type="text"
+                  placeholder="Enter your username"
+                  formControlName="username"
+                  required
+                />
+              </div>
+              <p [ngClass]="msgErrorsClassField('username')">
+                {{ msgErrorValidation("username") }}
+              </p>
+            </div>
+
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control">
+                <input
+                  [ngClass]="errorField('password')"
+                  type="password"
+                  placeholder="Enter your password"
+                  formControlName="password"
+                  required
+                />
+              </div>
+              <p [ngClass]="msgErrorsClassField('password')">
+                {{ msgErrorValidation("password") }}
+              </p>
+            </div>
+
+            <div>
+              <div class="control">
+                <button class="button is-success" type="submit">Sign in</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

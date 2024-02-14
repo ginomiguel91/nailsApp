@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Cookie } from 'ng2-cookies';
 import { User } from 'src/app/auth/interfaces/auth.interface';
 import { AuthService } from 'src/app/auth/services/auth.service';
-
+import { faUser, faSignOut } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -11,6 +11,8 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 })
 export class DashboardComponent implements OnInit {
   constructor(private authService: AuthService, private route: Router) {}
+  faSignOut = faSignOut;
+  faUser = faUser;
   ngOnInit(): void {
     console.log('ngOnInit');
     const token = localStorage.getItem('token');

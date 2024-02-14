@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { AuthResponse, JwtToken, User } from '../interfaces/auth.interface';
-import { catchError, map, of, tap } from 'rxjs';
+import { Subject, catchError, map, of, tap } from 'rxjs';
 import { jwtDecode } from 'jwt-decode';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 @Injectable({
@@ -11,6 +11,9 @@ import { Cookie } from 'ng2-cookies/ng2-cookies';
 export class AuthService {
   _baseUrl = environment.apiUrl;
   _usuario!: User;
+  // Definir un Subject para emitir eventos cuando se actualiza la información del usuario
+  private usuarioActualizadoSubject = new Subject<User>();
+  usuarioActualizado$ = this.usuarioActualizadoSubject.asObservable();
   constructor(private http: HttpClient) {}
   get usuario() {
     return { ...this._usuario };
@@ -28,6 +31,8 @@ export class AuthService {
             username: this.DecodeToken(resp.token).sub!,
           };
           Cookie.set('user', JSON.stringify(this._usuario));
+          // Emitir un evento cuando se actualiza la información del usuario
+          this.usuarioActualizadoSubject.next(this._usuario);
         }
       }),
       map(() => of(true)),

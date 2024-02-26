@@ -6,10 +6,12 @@
 
     <a
       role="button"
-      class="navbar-burger"
+      #navBurger
+      class="navbar-burger burguer"
       aria-label="menu"
       aria-expanded="false"
       data-target="navbarBasicExample"
+      (click)="toggleMenu()"
     >
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -17,14 +19,15 @@
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
+  <div id="navbarBasicExample" class="navbar-menu" #navMenu>
     <div class="navbar-start">
-      <div class="navbar-start">
-        <a class="navbar-item" [routerLink]="['/dashboard']"> Home </a>
-        <a class="navbar-item" href="#">Customers</a>
-        <a class="navbar-item" href="#">Search</a>
-        <a class="navbar-item" href="#">About</a>
-      </div>
+      <!-- ... Resto del contenido ... -->
+
+      <a class="navbar-item" [routerLink]="['/dashboard']"> Home </a>
+      <a class="navbar-item" href="#">Customers</a>
+      <a class="navbar-item" href="#">Search</a>
+      <a class="navbar-item" href="#">About</a>
+
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link"> More </a>
 
@@ -40,7 +43,6 @@
 
     <div class="navbar-end">
       <!--  si no hay usuario -->
-
       <div class="navbar-item" *ngIf="!usuario; else withUser">
         <div class="buttons">
           <a class="button is-primary">
@@ -59,14 +61,15 @@
 
             <a (click)="logout()" class="button is-danger">
               <fa-icon [icon]="faSignOut"></fa-icon>
-              Sign out</a
-            >
+              Sign out
+            </a>
           </div>
         </div>
       </ng-template>
     </div>
   </div>
 </nav>
+
 <app-catalogue></app-catalogue>
 <footer class="footer">
   <div class="container">

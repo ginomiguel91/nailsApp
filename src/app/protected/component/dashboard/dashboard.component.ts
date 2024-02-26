@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Cookie } from 'ng2-cookies';
 import { User } from 'src/app/auth/interfaces/auth.interface';
@@ -13,6 +13,8 @@ export class DashboardComponent implements OnInit {
   constructor(private authService: AuthService, private route: Router) {}
   faSignOut = faSignOut;
   faUser = faUser;
+  @ViewChild('navBurger') navBurger!: ElementRef;
+  @ViewChild('navMenu') navMenu!: ElementRef;
   ngOnInit(): void {
     console.log('ngOnInit');
     const token = localStorage.getItem('token');
@@ -42,5 +44,10 @@ export class DashboardComponent implements OnInit {
   logout() {
     this.authService.logout();
     this.route.navigate(['/auth']);
+  }
+
+  toggleMenu() {
+    this.navBurger.nativeElement.classList.toggle('is-active');
+    this.navMenu.nativeElement.classList.toggle('is-active');
   }
 }

@@ -1,0 +1,107 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" [routerLink]="['/dashboard']">
+      <img src="assets/dashboard.png" width="112" height="28" />
+    </a>
+
+    <a
+      role="button"
+      #navBurger
+      class="navbar-burger burguer"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+      (click)="toggleMenu()"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu" #navMenu>
+    <div class="navbar-start">
+      <!-- ... Resto del contenido ... -->
+
+      <a class="navbar-item" [routerLink]="['/dashboard']">
+        {{ "navbar.home" | translate }}
+      </a>
+      <a class="navbar-item" href="#">{{ "navbar.customers" | translate }}</a>
+      <a class="navbar-item" href="#">{{ "navbar.search" | translate }}</a>
+      <a class="navbar-item" href="#">{{ "navbar.about" | translate }}</a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link"> {{ "navbar.more" | translate }} </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" [routerLink]="['/dashboard/arrangement']">{{
+            "navbar.services" | translate
+          }}</a>
+          <a class="navbar-item" href="#">{{
+            "navbar.appointments" | translate
+          }}</a>
+          <a class="navbar-item"> {{ "navbar.contact" | translate }} </a>
+          <hr class="navbar-divider" />
+          <a class="navbar-item"> {{ "navbar.problem" | translate }} </a>
+        </div>
+      </div>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          <fa-icon [icon]="faLanguage"></fa-icon>
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" (click)="changeLanguage('en')">
+            <span class="icon">
+              <img src="assets/icons/united-states.png" />
+            </span>
+
+            <span class="column">
+              EN
+              <fa-icon *ngIf="selectedLn === 'en'" [icon]="faCheck"></fa-icon>
+            </span>
+          </a>
+          <a class="navbar-item" (click)="changeLanguage('es')">
+            <span class="icon">
+              <img src="assets/icons/spain.png" />
+            </span>
+
+            <span class="column">
+              ES
+              <fa-icon *ngIf="selectedLn === 'es'" [icon]="faCheck"></fa-icon>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <!--  si no hay usuario -->
+      <div class="navbar-item" *ngIf="!usuario; else withUser">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a [routerLink]="['/auth/login']" class="button is-light"> Log in </a>
+        </div>
+      </div>
+
+      <ng-template #withUser>
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <fa-icon [icon]="faUser"></fa-icon>
+              {{ usuario.username }}
+            </a>
+
+            <a (click)="logout()" class="button is-danger">
+              <fa-icon [icon]="faSignOut"></fa-icon>
+              {{ "navbar.singOut" | translate }}
+            </a>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</nav>

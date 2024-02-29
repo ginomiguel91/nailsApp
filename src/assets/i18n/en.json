@@ -1,0 +1,29 @@
+{ 
+"navbar":{
+  "home":"Home",
+  "customers":"Customers",
+  "search":"Search",
+  "about":"About",
+  "more":"More",
+  "services":"Services",
+  "appointments":"Appointments",
+  "contact":"Contact",
+  "problem":"Report an issue",
+  "singOut":"Sing out"
+
+},
+
+ "footer":{
+    "all": "All right reserved.",
+    "createdBy": "Created by: "
+},
+
+"catalogue":{
+    "index":"Glenda's catalogue"
+
+}
+
+
+
+  
+}

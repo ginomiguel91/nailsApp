@@ -1,0 +1,28 @@
+{ 
+"navbar":{
+  "home":"Inicio",
+  "customers":"Clientes",
+  "search":"Buscar",
+  "about":"Acerca de",
+  "more":"Más",
+  "services":"Servicios",
+  "appointments":"Citas",
+  "contact":"Contacto",
+  "problem":"Reportar un problema",
+  "singOut":"Salir"
+
+},
+
+"footer":{
+  "all": "Todos los derechos reservados.",
+  "createdBy": "Creado por: "
+},
+
+"catalogue":{
+    "index":"Catálogo de Glenda"
+
+}
+ 
+
+  
+}

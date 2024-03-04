@@ -1,4 +1,4 @@
-# NailsApp
+# NailsGestionApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
 
@@ -26,13 +26,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## NailsApp
+## NailsGestionApp
 
-Welcome to NailsApp, your all-in-one solution for managing nail appointments and service costs! This software was designed to simplify and optimize the experience for both nail salon owners and their valuable clients.
+Welcome to NailsGestionApp, your all-in-one solution for managing nail appointments and service costs! This software was designed to simplify and optimize the experience for both nail salon owners and their valuable clients.
 
 ## Description
 
-NailsApp is an intuitive and user-friendly platform that allows you to efficiently manage nail appointments and service costs. Whether you manage a full-fledged salon or are an independent nail professional, NailsApp is tailored to meet your needs and enhance the efficiency of your business operations.
+NailsApp is an intuitive and user-friendly platform that allows you to efficiently manage nail appointments and service costs. Whether you manage a full-fledged salon or are an independent nail professional, NailsGestionApp is tailored to meet your needs and enhance the efficiency of your business operations.
 
 ## Key Features
 
@@ -43,7 +43,7 @@ NailsApp is an intuitive and user-friendly platform that allows you to efficient
 
 ## Getting Started
 
-1. **Installation:** Follow the detailed instructions in our documentation to install NailsApp on your system.
+1. **Installation:** Follow the detailed instructions in our documentation to install NailsGestionApp on your system.
 2. **Configuration:** Customize the application according to the specific needs of your nail salon. Set service prices and adjust appointment reminder preferences.
 3. **Appointment Management:** Start scheduling appointments and enjoy more efficient time management.
 4. **Cost Recording:** Record the costs of your services to gain key financial insights.
@@ -52,4 +52,4 @@ NailsApp is an intuitive and user-friendly platform that allows you to efficient
 
 NailsApp is an ever-evolving project, and we appreciate your contributions! If you have suggestions, issues, or enhancements, feel free to open an issue or submit a pull request.
 
-Thank you for choosing NailsApp for nail appointment and service cost management. We hope your experience with our application is exceptional!
+Thank you for choosing NailsGestionApp for nail appointment and service cost management. We hope your experience with our application is exceptional!

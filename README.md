@@ -25,3 +25,31 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## NailsApp
+
+Welcome to NailsApp, your all-in-one solution for managing nail appointments and service costs! This software was designed to simplify and optimize the experience for both nail salon owners and their valuable clients.
+
+## Description
+
+NailsApp is an intuitive and user-friendly platform that allows you to efficiently manage nail appointments and service costs. Whether you manage a full-fledged salon or are an independent nail professional, NailsApp is tailored to meet your needs and enhance the efficiency of your business operations.
+
+## Key Features
+
+- **Appointment Management:** Schedule appointments effortlessly and visualize your agenda with ease. Automatic reminders will keep your clients informed and reduce no-shows.
+- **Service Costs:** Record and track the cost of each nail service to gain a clear insight into your income and expenses. This feature helps you make informed financial decisions.
+- **Client Profiles:** Store detailed information about each client, their preferences, and past services to provide personalized service and enhance client satisfaction.
+- **Service History:** Easily access the service history of each client to ensure a consistent and tailored experience based on their needs.
+
+## Getting Started
+
+1. **Installation:** Follow the detailed instructions in our documentation to install NailsApp on your system.
+2. **Configuration:** Customize the application according to the specific needs of your nail salon. Set service prices and adjust appointment reminder preferences.
+3. **Appointment Management:** Start scheduling appointments and enjoy more efficient time management.
+4. **Cost Recording:** Record the costs of your services to gain key financial insights.
+
+## Contributions
+
+NailsApp is an ever-evolving project, and we appreciate your contributions! If you have suggestions, issues, or enhancements, feel free to open an issue or submit a pull request.
+
+Thank you for choosing NailsApp for nail appointment and service cost management. We hope your experience with our application is exceptional!

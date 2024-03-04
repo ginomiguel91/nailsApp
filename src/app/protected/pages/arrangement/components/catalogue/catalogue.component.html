@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="section">
+    <div class="columns">
+      <div class="column has-text-centered">
+        <h1 class="title" style="color: palevioletred">
+          {{ "catalogue.index" | translate }}
+        </h1>
+        <br />
+      </div>
+    </div>
+    <div id="app" class="row columns is-multiline">
+      <div class="column is-4" *ngFor="let item of catalogue">
+        <div class="card large">
+          <div class="card-image">
+            <figure class="image is-16by9">
+              <img src="assets/cat_image.jpeg" alt="Image" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img
+                    src="assets/icons/success-green-check-mark-icon.webp"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4 no-padding">{{ item.description }}</p>
+                <p>
+                  <span class="title is-6"
+                    ><a href="http://twitter.com/twitterid">
+                      {{ item.price | currency : "USD" }}
+                    </a></span
+                  >
+                </p>
+                <p class="subtitle is-6">{{ item.description }}</p>
+              </div>
+            </div>
+            <div class="content">
+              <div class="background-icon">
+                <span class="icon-twitter"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

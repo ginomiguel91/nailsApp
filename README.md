@@ -32,7 +32,7 @@ Welcome to NailsGestionApp, your all-in-one solution for managing nail appointme
 
 ## Description
 
-NailsApp is an intuitive and user-friendly platform that allows you to efficiently manage nail appointments and service costs. Whether you manage a full-fledged salon or are an independent nail professional, NailsGestionApp is tailored to meet your needs and enhance the efficiency of your business operations.
+NailsGestionApp is an intuitive and user-friendly platform that allows you to efficiently manage nail appointments and service costs. Whether you manage a full-fledged salon or are an independent nail professional, NailsGestionApp is tailored to meet your needs and enhance the efficiency of your business operations.
 
 ## Key Features
 
@@ -50,6 +50,6 @@ NailsApp is an intuitive and user-friendly platform that allows you to efficient
 
 ## Contributions
 
-NailsApp is an ever-evolving project, and we appreciate your contributions! If you have suggestions, issues, or enhancements, feel free to open an issue or submit a pull request.
+NailsGestionApp is an ever-evolving project, and we appreciate your contributions! If you have suggestions, issues, or enhancements, feel free to open an issue or submit a pull request.
 
 Thank you for choosing NailsGestionApp for nail appointment and service cost management. We hope your experience with our application is exceptional!

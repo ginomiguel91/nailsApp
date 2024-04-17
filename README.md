@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## NailsApp
+## NailsGestionApp
 
 Welcome to NailsGestionApp, your all-in-one solution for managing nail appointments and service costs! This software was designed to simplify and optimize the experience for both nail salon owners and their valuable clients.
 
@@ -43,7 +43,7 @@ NailsGestionApp is an intuitive and user-friendly platform that allows you to ef
 
 ## Getting Started
 
-1. **Installation:** Follow the detailed instructions in our documentation to install NailsApp on your system.
+1. **Installation:** Follow the detailed instructions in our documentation to install NailsGestionApp on your system.
 2. **Configuration:** Customize the application according to the specific needs of your nail salon. Set service prices and adjust appointment reminder preferences.
 3. **Appointment Management:** Start scheduling appointments and enjoy more efficient time management.
 4. **Cost Recording:** Record the costs of your services to gain key financial insights.

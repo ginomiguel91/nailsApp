@@ -21,6 +21,21 @@
 "catalogue":{
     "index":"Glenda's catalogue"
 
+},
+
+"services":{
+  "index":"Services List"
+},
+
+"login":{
+  "title":"Sign in to application",
+  "subtitle":"Please sign in to proceed...",
+  "username":"Username",
+  "password":"Password",
+  "signInButton":"Sign In",
+  "placeholderUsername": "Enter your Username...",
+  "placeholderPassword": "Enter your Password..."
+
 }
 
 

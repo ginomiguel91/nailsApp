@@ -1,0 +1,34 @@
+<div id="navbarLanguage" class="navbar-menu">
+  <div class="navbar-end">
+    <!-- Begin language   -->
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        <fa-icon [icon]="faLanguage"></fa-icon>
+      </a>
+
+      <div class="navbar-dropdown">
+        <a class="navbar-item" (click)="languageItem('en')">
+          <span class="icon">
+            <img src="assets/icons/united-states.png" />
+          </span>
+
+          <span class="column">
+            EN
+            <fa-icon *ngIf="selectedLn === 'en'" [icon]="faCheck"></fa-icon>
+          </span>
+        </a>
+        <a class="navbar-item" (click)="languageItem('es')">
+          <span class="icon">
+            <img src="assets/icons/spain.png" />
+          </span>
+
+          <span class="column">
+            ES
+            <fa-icon *ngIf="selectedLn === 'es'" [icon]="faCheck"></fa-icon>
+          </span>
+        </a>
+      </div>
+    </div>
+    <!-- End  language   -->
+  </div>
+</div>

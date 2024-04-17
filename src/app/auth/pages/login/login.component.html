@@ -1,27 +1,33 @@
 <section class="hero is-light is-fullheight">
   <div class="hero-body">
     <div class="container">
+      <!--language -->
+
+      <app-language-dropdown
+        (languageItemEvent)="changeLanguage($event)"
+      ></app-language-dropdown>
+
       <div class="columns is-centered">
         <figure class="image is-512x512">
           <img src="./assets/nails.png" />
         </figure>
         <div class="column is-two-fifths">
           <h3 class="title has-text-black">
-            Sign in to application/Autenticarse en la aplicación
+            {{ "login.title" | translate }}
           </h3>
 
           <hr class="login-hr" />
           <p class="subtitle has-text-black">
-            Please sign in to proceed./Por favor,autentíquese para proceder
+            {{ "login.subtitle" | translate }}
           </p>
           <form class="box" [formGroup]="loginForm" (ngSubmit)="login()">
             <div class="field">
-              <label class="label">Username|Nombre de usuario</label>
+              <label class="label">{{ "login.username" | translate }}</label>
               <div class="control">
                 <input
                   [ngClass]="errorField('username')"
                   type="text"
-                  placeholder="Enter your username|Especifique su usuario"
+                  placeholder="{{ 'login.placeholderUsername' | translate }}"
                   formControlName="username"
                   required
                 />
@@ -32,12 +38,12 @@
             </div>
 
             <div class="field">
-              <label class="label">Password|Contraseña</label>
+              <label class="label">{{ "login.password" | translate }}</label>
               <div class="control">
                 <input
                   [ngClass]="errorField('password')"
                   type="password"
-                  placeholder="Enter your password|Especifique su contraseña"
+                  placeholder="{{ 'login.placeholderPassword' | translate }}"
                   formControlName="password"
                   required
                 />
@@ -49,7 +55,9 @@
 
             <div>
               <div class="control">
-                <button class="button is-success" type="submit">Sign in</button>
+                <button class="button is-success" type="submit">
+                  {{ "login.signInButton" | translate }}
+                </button>
               </div>
             </div>
           </form>

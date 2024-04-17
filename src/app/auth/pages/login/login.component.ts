@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import Swal from 'sweetalert2';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  selectedLn: string = '';
   ngOnInit(): void {
     this.loginForm.markAllAsTouched();
   }
@@ -21,7 +23,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private route: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private translate: TranslateService
   ) {}
 
   login() {
@@ -61,5 +64,10 @@ export class LoginComponent implements OnInit {
     } else {
       return '¡The field' + ' ' + field + ' ' + 'is valid !';
     }
+  }
+
+  changeLanguage(language: string) {
+    this.translate.use(language);
+    this.selectedLn = language;
   }
 }

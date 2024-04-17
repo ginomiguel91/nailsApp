@@ -22,7 +22,25 @@
     "index":"Catálogo de Glenda"
 
 }
+,
+
+"services":{
+  "index":"Lista de Servicios"
+},
+
+"login":{
+  "title":"Autenticarse en la aplicación",
+  "subtitle":"Por favor,autentíquese para proceder...",
+  "username":"Usuario",
+  "password":"Contraseña",
+  "signInButton":"Acceder",
+  "placeholderUsername": "Escriba su Usuario...",
+  "placeholderPassword": "Escriba su Contraseña..."
+
+}
+
+}
  
 
   
-}
+

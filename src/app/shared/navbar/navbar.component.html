@@ -47,35 +47,12 @@
       </div>
     </div>
     <div class="navbar-end">
-      <!-- Begin language   -->
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          <fa-icon [icon]="faLanguage"></fa-icon>
-        </a>
+      <!--  language   -->
 
-        <div class="navbar-dropdown">
-          <a class="navbar-item" (click)="changeLanguage('en')">
-            <span class="icon">
-              <img src="assets/icons/united-states.png" />
-            </span>
+      <app-language-dropdown
+        (languageItemEvent)="changeLanguage($event)"
+      ></app-language-dropdown>
 
-            <span class="column">
-              EN
-              <fa-icon *ngIf="selectedLn === 'en'" [icon]="faCheck"></fa-icon>
-            </span>
-          </a>
-          <a class="navbar-item" (click)="changeLanguage('es')">
-            <span class="icon">
-              <img src="assets/icons/spain.png" />
-            </span>
-
-            <span class="column">
-              ES
-              <fa-icon *ngIf="selectedLn === 'es'" [icon]="faCheck"></fa-icon>
-            </span>
-          </a>
-        </div>
-      </div>
       <!-- End  language   -->
       <ng-template *ngIf="!usuario; else withUser">
         <div class="navbar-item">

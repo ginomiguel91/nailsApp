@@ -2,10 +2,13 @@
   <div class="hero-body">
     <div class="container">
       <!--Begin language -->
-
-      <app-language-dropdown
-        (languageItemEvent)="changeLanguage($event)"
-      ></app-language-dropdown>
+      <div id="navbarLanguage" class="navbar-menu">
+        <div class="navbar-end">
+          <app-language-dropdown
+            (languageItemEvent)="changeLanguage($event)"
+          ></app-language-dropdown>
+        </div>
+      </div>
 
       <!--End language -->
 

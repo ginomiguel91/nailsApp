@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'nailsApp';
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en'); // Idioma predeterminado (inglés)
-    translate.use('en'); // Cambiar al español
+    translate.setDefaultLang('en'); //  Default language (English)
+    translate.use('en'); 
   }
 }

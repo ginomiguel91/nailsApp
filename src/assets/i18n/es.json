@@ -35,9 +35,17 @@
   "password":"Contraseña",
   "signInButton":"Acceder",
   "placeholderUsername": "Escriba su Usuario...",
-  "placeholderPassword": "Escriba su Contraseña..."
+  "placeholderPassword": "Escriba su Contraseña...",
+  "access_error_title":"Error al ingresar",
+  "access_error_content":"¡Usuario o contraseña incorrectos!"
+ 
 
+},
+"validation":{
+  "field_invalid":"¡El campo {{field}} es inválido!",
+  "field_valid":"¡El campo {{field}} es válido!"
 }
+
 
 }
  

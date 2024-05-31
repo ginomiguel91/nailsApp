@@ -34,7 +34,15 @@
   "password":"Password",
   "signInButton":"Sign In",
   "placeholderUsername": "Enter your Username...",
-  "placeholderPassword": "Enter your Password..."
+  "placeholderPassword": "Enter your Password...",
+  "access_error_title":"Login error",
+  "access_error_content":"User or password wrong!"
+
+
+},
+"validation":{
+  "field_invalid":"The field {{field}} is invalid!",
+  "field_valid":"The field {{field}} is valid!"
 
 }
 

@@ -1,10 +1,18 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { AuthResponse, JwtToken, User } from '../interfaces/auth.interface';
-import { Subject, catchError, map, of, tap } from 'rxjs';
+import { Observable, Subject, catchError, map, of, tap } from 'rxjs';
 import { jwtDecode } from 'jwt-decode';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
+
+
+
+
+export interface Credential {
+email:string,
+password:string
+}
 @Injectable({
   providedIn: 'root',
 })
@@ -14,7 +22,13 @@ export class AuthService {
   // Definir un Subject para emitir eventos cuando se actualiza la información del usuario
   private usuarioActualizadoSubject = new Subject<User>();
   usuarioActualizado$ = this.usuarioActualizadoSubject.asObservable();
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+
+    
+    ) {}
+
+
+
 /**
  * The function returns a copy of the user object.
  * @returns A copy of the `_usuario` object is being returned using the spread operator `{
@@ -105,4 +119,10 @@ export class AuthService {
     localStorage.removeItem('token');
     Cookie.delete('user');
   }
+
+
+
+ // Nuevo método para iniciar sesión con Google
+
+  
 }

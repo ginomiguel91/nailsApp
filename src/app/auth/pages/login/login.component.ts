@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import Swal from 'sweetalert2';
 import { TranslateService } from '@ngx-translate/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +25,8 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private route: Router,
     private authService: AuthService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    
   ) {}
 
   /**
@@ -127,4 +129,12 @@ this.translate.get(['login.access_error_title','login.access_error_content'])
     this.translate.use(language);
     this.selectedLn = language;
   }
+ 
+ 
+
+
+
+  
 }
+ 
+

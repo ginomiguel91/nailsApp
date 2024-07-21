@@ -11,8 +11,11 @@ export interface AuthResponse {
 `User`. This interface specifies the structure of objects that are expected to have a `username`
 property of type string and an optional `email` property of type string. */
 export interface User {
-  username: string;
+  uid?: string;
+  displayName?: string;
   email?: string;
+  photoURL?: string;
+  phoneNumber?: string;
 }
 /* The `export interface JwtToken` in the TypeScript code snippet is defining a TypeScript interface
 named `JwtToken`. This interface specifies the structure of objects that are expected to have

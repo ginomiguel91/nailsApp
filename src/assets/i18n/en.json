@@ -31,12 +31,15 @@
   "title":"Sign in to application",
   "subtitle":"Please sign in to proceed...",
   "username":"Username",
+  "email":"Email",
   "password":"Password",
   "signInButton":"Sign In",
   "placeholderUsername": "Enter your Username...",
   "placeholderPassword": "Enter your Password...",
   "access_error_title":"Login error",
-  "access_error_content":"User or password wrong!"
+  "access_error_content":"User or password wrong!",
+  "noAccount":"Don’t have an account yet?",
+  "signInLink":"login"
 
 
 },
@@ -44,9 +47,28 @@
   "field_invalid":"The field {{field}} is invalid!",
   "field_valid":"The field {{field}} is valid!"
 
+},
+"signUp":{
+  "title":"Sign up to application",
+  "subtitle":"Please sign up to proceed...",
+  "signUpButton":"Sign Up",
+  "signUpLink":"Sign up",
+   "alreadyAccount":"Already an account"
+},
+
+"profile": {
+  "title": "User Profile",
+  "email": "Email",
+  "displayName": "Display Name",
+  "photoURL": "Profile Photo",
+  "phone":"Phone",
+   "nav":"My profile"
+  }
 }
+
+
+
 
 
 
   
-}

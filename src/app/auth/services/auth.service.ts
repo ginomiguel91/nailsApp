@@ -35,7 +35,7 @@ export class AuthService {
         this.userData = user;
 
         const userToStore: User = {
-          uid: user.uid,
+          id: user.uid,
           displayName: user.displayName || user.email!.split('@')[0], // Si no hay displayName, usar parte del email
           email: user.email!,
           photoURL: user.photoURL || '',
@@ -140,7 +140,9 @@ export class AuthService {
   //   Cookie.delete('user');
   // }
 
-  // Nuevo método para iniciar sesión con Google
+  getUser(): Observable<any> {
+    return this.firebaseAuthenticationService.authState;
+  }
 
   // log-in with email and password
   logInWithEmailAndPassword(email: string, password: string) {
@@ -162,6 +164,7 @@ export class AuthService {
       .then(() => this.observeUserState())
       .catch((error: Error) => {
         alert(error.message);
+        console.error('Sign In Error:', error);
       });
   }
 
@@ -175,6 +178,7 @@ export class AuthService {
       })
       .catch((error) => {
         alert(error.message);
+        console.error('Sign Up Error:', error);
       });
   }
 

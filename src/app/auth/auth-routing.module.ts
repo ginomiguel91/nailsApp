@@ -12,6 +12,11 @@ const routes: Routes = [
       },
 
       {
+        path: 'sign-up',
+        component: LoginComponent,
+      },
+
+      {
         path: '**',
         redirectTo: 'login',
       },

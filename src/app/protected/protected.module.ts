@@ -7,9 +7,10 @@ import { ArrangementModule } from './pages/arrangement/arrangement.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from '../shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, ProfileComponent],
   imports: [
     CommonModule,
     ProtectedRoutingModule,

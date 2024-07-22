@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CatalogueComponent } from './pages/arrangement/components/catalogue/catalogue.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
             component: CatalogueComponent,
           },
 
+          {
+            path: 'profile',
+            component: ProfileComponent,
+          },
           {
             path: 'arrangement',
             loadChildren: () =>

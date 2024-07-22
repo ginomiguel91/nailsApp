@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import Swal from 'sweetalert2';
 import { TranslateService } from '@ngx-translate/core';
@@ -11,23 +11,32 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   selectedLn: string = '';
-  // ngOnInit(): void {
-  //   // this.loginForm.markAllAsTouched();
-  // }
+  loginForm!: FormGroup;
+  isSignUpMode: boolean = false;
+  ngOnInit(): void {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    });
+  }
 
-  // loginForm: FormGroup = this.fb.group({
-  //   username: ['', [Validators.required]],
-  //   password: ['', [Validators.required]],
-  // });
   constructor(
-    // private fb: FormBuilder,
-    // private route: Router,
+    private fb: FormBuilder,
+    private router: Router,
+    private route: ActivatedRoute,
     private authService: AuthService,
     private translate: TranslateService
-  ) {}
-
+  ) {
+    this.route.url.subscribe((url) => {
+      this.isSignUpMode = url[0].path === 'sign-up';
+    });
+  }
+  toggleMode() {
+    this.isSignUpMode = !this.isSignUpMode;
+    this.router.navigate([this.isSignUpMode ? '/auth/sign-up' : '/auth/login']);
+  }
   /**
    * The `login` function in TypeScript handles user authentication by sending login credentials to the
    * server and redirecting to the dashboard upon successful login or displaying an error message for
@@ -56,7 +65,26 @@ export class LoginComponent {
   //       }
   //     });
   //   }
-
+  /* The `onSubmit` function in the `LoginComponent` class is triggered when a form submission event
+  occurs. It first checks if the login form is valid by calling `this.loginForm.valid`. If the form
+  is valid, it retrieves the email and password values from the form and then calls the
+  `logInWithEmailAndPassword` method from the `authService` service with these email and password
+  parameters. This function is typically used to handle form submissions for logging in a user with
+  the provided credentials. */
+  onSubmit() {
+    if (this.loginForm.valid) {
+      const { email, password } = this.loginForm.value;
+      if (this.isSignUpMode) {
+        this.authService.signUpWithEmailAndPassword(email, password);
+      } else {
+        this.authService.logInWithEmailAndPassword(email, password);
+      }
+    }
+  }
+  /* The `logIn` method in the LoginComponent class is a function that takes two parameters, `email`
+  and `password`, and calls the `logInWithEmailAndPassword` method from the `authService` service
+  with these parameters. This method is used to log in a user with the provided email and password
+  credentials. */
   logIn(email: string, password: string) {
     this.authService.logInWithEmailAndPassword(email, password);
   }

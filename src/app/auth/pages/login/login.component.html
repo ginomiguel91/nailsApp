@@ -18,26 +18,37 @@
         </figure>
         <div class="column is-two-fifths">
           <h3 class="title has-text-black">
-            {{ "login.title" | translate }}
+            {{
+              isSignUpMode
+                ? ("signUp.title" | translate)
+                : ("login.title" | translate)
+            }}
           </h3>
 
           <hr class="login-hr" />
           <p class="subtitle has-text-black">
-            {{ "login.subtitle" | translate }}
+            {{
+              isSignUpMode
+                ? ("signUp.subtitle" | translate)
+                : ("login.subtitle" | translate)
+            }}
           </p>
-          <form class="box">
+          <form class="box" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="field">
-              <label for="email" class="label">Email</label>
-              <div class="control">
+              <label for="email" class="label">{{
+                "login.email" | translate
+              }}</label>
+              <div class="control has-icons-left">
                 <input
                   class="input"
                   type="email"
-                  placeholder="example@email.com"
-                  name="email"
-                  id="email"
-                  #email
+                  placeholder="example@yahoo.com"
+                  formControlName="email"
                   required
                 />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
               </div>
             </div>
 
@@ -50,9 +61,7 @@
                   class="input"
                   type="password"
                   placeholder="******"
-                  name="password"
-                  id="password"
-                  #password
+                  formControlName="password"
                   required
                 />
               </div>
@@ -63,24 +72,34 @@
                 <div class="control">
                   <button
                     class="button is-success"
-                    type="click"
-                    (click)="logIn(email.value, password.value)"
+                    type="submit"
+                    [disabled]="!loginForm.valid"
                   >
-                    {{ "login.signInButton" | translate }}
+                    {{
+                      isSignUpMode
+                        ? ("signUp.signUpButton" | translate)
+                        : ("login.signInButton" | translate)
+                    }}
                   </button>
                 </div>
               </div>
             </div>
 
-            <div class="field">
+            <div *ngIf="!isSignUpMode" class="content">
               <p class="text">
-                Don’t have an account yet?
-                <a
-                  (click)="signUp(email.value, password.value)"
-                  class="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                  routerLink="/sign-up"
-                  >Sign up</a
-                >
+                {{ "login.noAccount" | translate }}
+                <a class="has-text-link" (click)="toggleMode()">{{
+                  "signUp.signUpLink" | translate
+                }}</a>
+              </p>
+            </div>
+
+            <div *ngIf="isSignUpMode" class="content">
+              <p class="text">
+                {{ "signUp.alreadyAccount" | translate }}
+                <a class="has-text-link" (click)="toggleMode()">{{
+                  "login.signInLink" | translate
+                }}</a>
               </p>
             </div>
           </form>
@@ -98,25 +117,6 @@
                       />
                     </span>
                     <span>Sign up with Google</span>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="field">
-            <div>
-              <div class="control">
-                <button class="button" (click)="logInWithApple()">
-                  <span class="icon-text">
-                    <span class="icon">
-                      <img
-                        src="assets/icons/icloud.svg"
-                        alt="iCloud"
-                        style="width: 1em; height: 1em"
-                      />
-                    </span>
-                    <span>Sign up with ICloud</span>
                   </span>
                 </button>
               </div>

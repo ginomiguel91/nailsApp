@@ -11,7 +11,7 @@ export interface AuthResponse {
 `User`. This interface specifies the structure of objects that are expected to have a `username`
 property of type string and an optional `email` property of type string. */
 export interface User {
-  uid?: string;
+  id?: string;
   displayName?: string;
   email?: string;
   photoURL?: string;

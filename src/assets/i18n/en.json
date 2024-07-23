@@ -64,6 +64,10 @@
   "phone":"Phone",
    "nav":"My profile"
   }
+,
+  "buttonGoogle":{
+   "title":"Sign up with Google"
+  }
 }
 
 

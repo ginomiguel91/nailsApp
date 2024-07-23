@@ -9,7 +9,7 @@
     <a
       role="button"
       #navBurger
-      class="navbar-burger burguer"
+      class="navbar-burger burger"
       aria-label="menu"
       aria-expanded="false"
       data-target="navbarBasicExample"
@@ -23,8 +23,6 @@
 
   <div id="navbarBasicExample" class="navbar-menu" #navMenu>
     <div class="navbar-start">
-      <!-- ... Resto del contenido ... -->
-
       <a class="navbar-item" [routerLink]="['/dashboard']">
         {{ "navbar.home" | translate }}
       </a>
@@ -49,13 +47,10 @@
       </div>
     </div>
     <div class="navbar-end">
-      <!--  language   -->
-
       <app-language-dropdown
         (languageItemEvent)="changeLanguage($event)"
       ></app-language-dropdown>
 
-      <!-- End  language   -->
       <ng-template *ngIf="!user; else withUser">
         <div class="navbar-item">
           <a class="navbar-link" [routerLink]="['/auth/login']"> Log in </a>

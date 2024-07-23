@@ -1,0 +1,29 @@
+.navbar-item.has-dropdown .navbar-link {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item.has-dropdown .navbar-dropdown {
+  display: none; /* Hide the dropdown by default */
+}
+
+.navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown,
+.navbar-item.has-dropdown.is-active .navbar-dropdown {
+  display: block; /* Show the dropdown on hover or when active */
+}
+
+@media (max-width: 768px) {
+  .navbar-item.has-dropdown .navbar-dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 20;
+    display: none; /* Ensure it's hidden on mobile */
+  }
+
+  .navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown,
+  .navbar-item.has-dropdown.is-active .navbar-dropdown {
+    display: block; /* Show on hover or when active on mobile */
+  }
+}

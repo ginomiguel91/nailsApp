@@ -1,0 +1,14 @@
+/* navbar.css */
+.navbar-menu {
+  display: none;
+}
+
+.navbar-menu.is-active {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .navbar-menu {
+    display: flex;
+  }
+}

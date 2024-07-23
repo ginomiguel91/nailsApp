@@ -1,8 +1,38 @@
+/* catalogue.component.css */
 .card {
-    transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .card-image img {
+  object-fit: cover;
+}
+
+.card .media .media-content .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card .media .media-content .subtitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .card-content {
+    padding: 1rem;
   }
-  
-  .card:hover {
-    transform: scale(1.05);
+
+  .card .media .media-left {
+    display: none;
   }
-  
+
+  .card .media .media-content {
+    text-align: center;
+  }
+}

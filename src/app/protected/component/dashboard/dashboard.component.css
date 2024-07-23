@@ -1,0 +1,10 @@
+/* dashboard.css */
+.section {
+  padding: 1rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+}

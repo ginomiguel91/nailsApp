@@ -1,7 +1,6 @@
-<!-- Begin language   -->
+<!-- Begin language -->
 <div class="navbar-item has-dropdown is-hoverable">
-  <a class="navbar-link">
-  
+  <a class="navbar-link" aria-haspopup="true" aria-controls="dropdown-menu">
     <span class="icon-text">
       <span class="icon">
         <i class="fas fa-language"></i>
@@ -9,27 +8,26 @@
     </span>
   </a>
 
-  <div class="navbar-dropdown">
+  <div class="navbar-dropdown" id="dropdown-menu">
     <a class="navbar-item" (click)="languageItem('en')">
       <span class="icon">
         <img src="assets/icons/united-states.png" />
       </span>
-
       <span class="column">
-        EN
         <fa-icon *ngIf="selectedLn === 'en'" [icon]="faCheck"></fa-icon>
       </span>
+
+      <span>EN</span>
     </a>
     <a class="navbar-item" (click)="languageItem('es')">
       <span class="icon">
         <img src="assets/icons/spain.png" />
       </span>
-
       <span class="column">
-        ES
         <fa-icon *ngIf="selectedLn === 'es'" [icon]="faCheck"></fa-icon>
       </span>
+      <span>ES</span>
     </a>
   </div>
 </div>
-<!-- End  language   -->
+<!-- End language -->

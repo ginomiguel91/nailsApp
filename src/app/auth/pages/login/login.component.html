@@ -1,22 +1,21 @@
 <section class="hero is-light is-fullheight">
   <div class="hero-body">
     <div class="container">
-      <!--Begin language -->
-      <div id="navbarLanguage" class="navbar-menu">
-        <div class="navbar-end">
-          <app-language-dropdown
-            (languageItemEvent)="changeLanguage($event)"
-          ></app-language-dropdown>
-        </div>
-      </div>
-
-      <!--End language -->
-
       <div class="columns is-centered">
         <figure class="image is-512x512">
-          <img src="./assets/nails.png" />
+          <img src="./assets/nails.png" alt="Logo" />
         </figure>
         <div class="column is-two-fifths">
+          <!-- Language Selector -->
+          <div class="field is-grouped is-grouped-right">
+            <div class="control">
+              <app-language-dropdown
+                (languageItemEvent)="changeLanguage($event)"
+              ></app-language-dropdown>
+            </div>
+          </div>
+          <!-- End Language Selector -->
+
           <h3 class="title has-text-black">
             {{
               isSignUpMode
@@ -33,6 +32,7 @@
                 : ("login.subtitle" | translate)
             }}
           </p>
+
           <form class="box" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="field">
               <label for="email" class="label">{{
@@ -53,7 +53,7 @@
             </div>
 
             <div class="field">
-              <label for="password " class="label">{{
+              <label for="password" class="label">{{
                 "login.password" | translate
               }}</label>
               <div class="control">
@@ -68,20 +68,18 @@
             </div>
 
             <div class="field">
-              <div>
-                <div class="control">
-                  <button
-                    class="button is-success"
-                    type="submit"
-                    [disabled]="!loginForm.valid"
-                  >
-                    {{
-                      isSignUpMode
-                        ? ("signUp.signUpButton" | translate)
-                        : ("login.signInButton" | translate)
-                    }}
-                  </button>
-                </div>
+              <div class="control">
+                <button
+                  class="button is-success"
+                  type="submit"
+                  [disabled]="!loginForm.valid"
+                >
+                  {{
+                    isSignUpMode
+                      ? ("signUp.signUpButton" | translate)
+                      : ("login.signInButton" | translate)
+                  }}
+                </button>
               </div>
             </div>
 
@@ -105,21 +103,19 @@
           </form>
 
           <div class="field">
-            <div>
-              <div class="control">
-                <button class="button" (click)="logInWithGoogle()">
-                  <span class="icon-text">
-                    <span class="icon">
-                      <img
-                        src="assets/icons/google.svg"
-                        alt="google"
-                        style="width: 1em; height: 1em"
-                      />
-                    </span>
-                    <span>Sign up with Google</span>
+            <div class="control">
+              <button class="button" (click)="logInWithGoogle()">
+                <span class="icon-text">
+                  <span class="icon">
+                    <img
+                      src="assets/icons/google.svg"
+                      alt="google"
+                      style="width: 1em; height: 1em"
+                    />
                   </span>
-                </button>
-              </div>
+                  <span>{{ "buttonGoogle.title" | translate }}</span>
+                </span>
+              </button>
             </div>
           </div>
         </div>

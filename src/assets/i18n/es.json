@@ -64,7 +64,10 @@
   "phone":"Teléfono",
   "nav":"Mi perfil"
   }
-
+,  
+"buttonGoogle":{
+   "title":"Registrarse con Google"
+  }
 
 }
  

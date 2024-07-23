@@ -8,8 +8,11 @@
         <br />
       </div>
     </div>
-    <div id="app" class="row columns is-multiline">
-      <div class="column is-4" *ngFor="let item of catalogue">
+    <div id="app" class="columns is-multiline">
+      <div
+        class="column is-12-mobile is-6-tablet is-4-desktop"
+        *ngFor="let item of catalogue"
+      >
         <div class="card large">
           <div class="card-image">
             <figure class="image is-16by9">
@@ -29,11 +32,11 @@
               <div class="media-content">
                 <p class="title is-4 no-padding">{{ item.description }}</p>
                 <p>
-                  <span class="title is-6"
-                    ><a href="http://twitter.com/twitterid">
+                  <span class="title is-6">
+                    <a href="http://twitter.com/twitterid">
                       {{ item.price | currency : "USD" }}
-                    </a></span
-                  >
+                    </a>
+                  </span>
                 </p>
                 <p class="subtitle is-6">{{ item.description }}</p>
               </div>

@@ -19,7 +19,8 @@
 },
 
 "catalogue":{
-    "index":"Catálogo de Glenda"
+    "index":"Catálogo de Glenda",
+    "noData":"No hay artículos del catálogo disponibles"
 
 }
 ,
@@ -39,7 +40,7 @@
   "placeholderPassword": "Escriba su Contraseña...",
   "access_error_title":"Error al ingresar",
   "access_error_content":"¡Usuario o contraseña incorrectos!",
-  "noAccount":"No tiene cuenta todavía?",
+  "noAccount":"¿No tiene cuenta todavía?",
   "signInLink":"autenticarse"
  
 

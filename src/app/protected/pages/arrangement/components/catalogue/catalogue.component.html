@@ -8,7 +8,11 @@
         <br />
       </div>
     </div>
-    <div id="app" class="columns is-multiline">
+    <div
+      id="app"
+      class="columns is-multiline"
+      *ngIf="catalogue.length > 0; else noData"
+    >
       <div
         class="column is-12-mobile is-6-tablet is-4-desktop"
         *ngFor="let item of catalogue"
@@ -50,5 +54,14 @@
         </div>
       </div>
     </div>
+
+    <!-- No data template -->
+    <ng-template #noData>
+      <div class="column is-12 has-text-centered">
+        <div class="notification is-info">
+          <p>{{ "catalogue.noData" | translate }}</p>
+        </div>
+      </div>
+    </ng-template>
   </div>
 </div>

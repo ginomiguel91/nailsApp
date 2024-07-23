@@ -8,9 +8,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from '../shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { AboutComponent } from './pages/about/about.component';
+import { CustomerComponent } from './pages/customer/customer.component';
 
 @NgModule({
-  declarations: [DashboardComponent, ProfileComponent],
+  declarations: [DashboardComponent, ProfileComponent, AboutComponent, CustomerComponent],
   imports: [
     CommonModule,
     ProtectedRoutingModule,

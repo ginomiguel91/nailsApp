@@ -10,5 +10,37 @@
 @media (min-width: 1024px) {
   .navbar-menu {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+}
+
+.navbar-brand .navbar-item .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-burger {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .navbar-burger {
+    display: block;
+  }
+}
+
+.icon-text .icon img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image.is-30x30 img {
+  width: 30px;
+  height: 30px;
 }

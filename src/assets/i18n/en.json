@@ -19,7 +19,8 @@
 },
 
 "catalogue":{
-    "index":"Glenda's catalogue"
+    "index":"Glenda's catalogue",
+    "noData":"No catalog items available"
 
 },
 
@@ -68,6 +69,8 @@
   "buttonGoogle":{
    "title":"Sign up with Google"
   }
+
+
 }
 
 

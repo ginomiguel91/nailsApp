@@ -26,9 +26,13 @@
       <a class="navbar-item" [routerLink]="['/dashboard']">
         {{ "navbar.home" | translate }}
       </a>
-      <a class="navbar-item" href="#">{{ "navbar.customers" | translate }}</a>
+      <a class="navbar-item" [routerLink]="['/dashboard/customer']">{{
+        "navbar.customers" | translate
+      }}</a>
       <a class="navbar-item" href="#">{{ "navbar.search" | translate }}</a>
-      <a class="navbar-item" href="#">{{ "navbar.about" | translate }}</a>
+      <a class="navbar-item" [routerLink]="['/dashboard/about']">{{
+        "navbar.about" | translate
+      }}</a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link"> {{ "navbar.more" | translate }} </a>

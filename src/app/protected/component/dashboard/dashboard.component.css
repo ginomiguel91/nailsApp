@@ -15,3 +15,14 @@
   max-width: 100%;
   height: auto;
 }
+
+/* Ajustes adicionales */
+.container {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 0.5rem;
+  }
+}

@@ -68,7 +68,62 @@
 ,  
 "buttonGoogle":{
    "title":"Registrarse con Google"
+  },
+
+  "about": {
+  "title": "NailsGestionApp",
+  "content1": "Bienvenido a NailsGestionApp, tu solución todo en uno para gestionar citas de uñas",
+  "content2": "y costos de servicios! Este software fue diseñado para simplificar",
+  "content3": "y optimizar la experiencia tanto para los propietarios de salones de uñas como para sus",
+  "content4": "valiosos clientes.",
+  "descriptionTitle": "Descripción",
+  "descriptionContent1": "NailsGestionApp es una plataforma intuitiva y fácil de usar que permite",
+  "descriptionContent2": "gestionar eficientemente las citas de uñas y los costos de los servicios. Ya sea",
+  "descriptionContent3": "que administres un salón de uñas completo o seas un profesional independiente de uñas,",
+  "descriptionContent4": "NailsGestionApp está diseñado para satisfacer tus necesidades y mejorar la",
+  "descriptionContent5": "eficiencia de las operaciones de tu negocio.",
+  "keyFT": "Características Clave",
+  "appointmentManagement": "Gestión de Citas:",
+  "appointmentText1": "Programa citas",
+  "appointmentText2": "sin esfuerzo y visualiza tu agenda con facilidad. Los recordatorios automáticos",
+  "appointmentText3": "mantendrán a tus clientes informados y reducirán las ausencias.",
+  "serviceCosts": "Costos de Servicios:",
+  "serviceText1": "Registra y rastrea el costo de cada",
+  "serviceText2": "servicio de uñas para obtener una visión clara de tus ingresos y gastos. Esta",
+  "serviceText3": "característica te ayuda a tomar decisiones financieras informadas.",
+  "clientProfiles": "Perfiles de Clientes:",
+  "clientText1": "Almacena información detallada sobre",
+  "clientText2": "cada cliente, sus preferencias y servicios anteriores para proporcionar",
+  "clientText3": "un servicio personalizado y mejorar la satisfacción del cliente.",
+  "serviceHistory": "Historial de Servicios:",
+  "serviceHistoryText1": "Accede fácilmente al historial de servicios de",
+  "serviceHistoryText2": "cada cliente para asegurar una experiencia consistente y personalizada basada en",
+  "serviceHistoryText3": "sus necesidades."
+},
+
+  "customer": {
+    "title": "Políticas del Sitio",
+    "introduction": "Bienvenido a NailsGestionApp. A continuación encontrarás nuestras políticas del sitio, que incluyen nuestras políticas de depuración de usuarios y términos de uso. Por favor, lee estas políticas para entender cómo gestionamos los datos de los usuarios y las reglas que rigen el uso de nuestro sitio.",
+    "debuggingPoliciesTitle": "Políticas de Depuración de Usuarios",
+    "debuggingPolicies": {
+      "intro": "Nuestra aplicación puede recopilar ciertos datos de usuario para fines de depuración. Estos datos nos ayudan a mejorar nuestro servicio y resolver cualquier problema que los usuarios puedan encontrar. A continuación se describen nuestras políticas sobre la depuración de usuarios:",
+      "dataCollection": "Recopilación de Datos: Podemos recopilar datos relacionados con las interacciones de los usuarios y el rendimiento de la aplicación para diagnosticar y resolver problemas.",
+      "dataUsage": "Uso de Datos: Los datos recopilados se utilizan únicamente para depurar y mejorar la aplicación. No se comparten con terceros.",
+      "dataPrivacy": "Privacidad de Datos: Nos tomamos en serio la privacidad de los usuarios e implementamos medidas adecuadas para asegurar que los datos recopilados se almacenen y manejen de manera segura.",
+      "userConsent": "Consentimiento del Usuario: Al utilizar nuestra aplicación, consientes la recopilación y el uso de datos para fines de depuración según lo descrito en esta política."
+    },
+    "termsOfUseTitle": "Términos de Uso",
+    "termsOfUse": {
+      "intro": "Al acceder o usar NailsGestionApp, aceptas cumplir con los siguientes términos:",
+      "acceptance": "Aceptación: Al usar nuestra aplicación, aceptas estos términos y condiciones. Si no estás de acuerdo, por favor no uses nuestro servicio.",
+      "modificationOfTerms": "Modificación de Términos: Nos reservamos el derecho de modificar estos términos en cualquier momento. Cualquier cambio será efectivo inmediatamente después de su publicación.",
+      "prohibitedUses": "Usos Prohibidos: Aceptas no usar nuestra aplicación para ningún propósito ilegal o de manera que pueda dañar, deshabilitar o perjudicar nuestro servicio.",
+      "limitationOfLiability": "Limitación de Responsabilidad: NailsGestionApp no es responsable de ningún daño indirecto, incidental o consecuente que surja del uso de nuestra aplicación."
+    }
   }
+
+
+
 
 }
  

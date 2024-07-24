@@ -1,78 +1,67 @@
 <section class="section">
   <div class="container">
     <!-- Title -->
-    <h1 class="title is-3">Site Policies</h1>
+    <h1 class="title is-3">{{ "customer.title" | translate }}</h1>
 
     <!-- Introduction Section -->
     <div class="content mt-5">
-      <p>
-        Welcome to NailsGestionApp. Below you will find our site policies which
-        include our user debugging policies and terms of use. Please read
-        through these policies to understand how we manage user data and the
-        rules governing the use of our site.
-      </p>
+      <p>{{ "customer.introduction" | translate }}</p>
     </div>
 
     <!-- User Debugging Policies Section -->
-    <h2 class="title is-4 mt-5">User Debugging Policies</h2>
+    <h2 class="title is-4 mt-5">
+      {{ "customer.debuggingPoliciesTitle" | translate }}
+    </h2>
     <div class="content">
-      <p>
-        Our application may collect certain user data for debugging purposes.
-        This data helps us improve our service and address any issues that users
-        may encounter. The following outlines our policies regarding user
-        debugging:
-      </p>
+      <p>{{ "customer.debuggingPolicies.intro" | translate }}</p>
       <ul>
         <li>
-          <strong>Data Collection:</strong> We may collect data related to user
-          interactions and application performance to diagnose and resolve
-          issues.
+          <strong>{{
+            "customer.debuggingPolicies.dataCollection" | translate
+          }}</strong>
         </li>
         <li>
-          <strong>Data Usage:</strong> The collected data is used solely for
-          debugging and improving the application. It is not shared with third
-          parties.
+          <strong>{{
+            "customer.debuggingPolicies.dataUsage" | translate
+          }}</strong>
         </li>
         <li>
-          <strong>Data Privacy:</strong> We take user privacy seriously and
-          implement appropriate measures to ensure that collected data is
-          securely stored and handled.
+          <strong>{{
+            "customer.debuggingPolicies.dataPrivacy" | translate
+          }}</strong>
         </li>
         <li>
-          <strong>User Consent:</strong> By using our application, you consent
-          to the collection and use of data for debugging purposes as described
-          in this policy.
+          <strong>{{
+            "customer.debuggingPolicies.userConsent" | translate
+          }}</strong>
         </li>
       </ul>
     </div>
 
     <!-- Terms of Use Section -->
-    <h2 class="title is-4 mt-5">Terms of Use</h2>
+    <h2 class="title is-4 mt-5">
+      {{ "customer.termsOfUseTitle" | translate }}
+    </h2>
     <div class="content">
-      <p>
-        By accessing or using NailsGestionApp, you agree to comply with the
-        following terms:
-      </p>
+      <p>{{ "customer.termsOfUse.intro" | translate }}</p>
       <ul>
         <li>
-          <strong>Acceptance:</strong> By using our application, you agree to
-          these terms and conditions. If you do not agree, please do not use our
-          service.
+          <strong>{{ "customer.termsOfUse.acceptance" | translate }}</strong>
         </li>
         <li>
-          <strong>Modification of Terms:</strong> We reserve the right to modify
-          these terms at any time. Any changes will be effective immediately
-          upon posting.
+          <strong>{{
+            "customer.termsOfUse.modificationOfTerms" | translate
+          }}</strong>
         </li>
         <li>
-          <strong>Prohibited Uses:</strong> You agree not to use our application
-          for any unlawful purposes or in a manner that could damage, disable,
-          or impair our service.
+          <strong>{{
+            "customer.termsOfUse.prohibitedUses" | translate
+          }}</strong>
         </li>
         <li>
-          <strong>Limitation of Liability:</strong> NailsGestionApp is not
-          liable for any indirect, incidental, or consequential damages arising
-          from the use of our application.
+          <strong>{{
+            "customer.termsOfUse.limitationOfLiability" | translate
+          }}</strong>
         </li>
       </ul>
     </div>

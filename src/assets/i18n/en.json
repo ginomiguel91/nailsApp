@@ -69,6 +69,62 @@
   "buttonGoogle":{
    "title":"Sign up with Google"
   }
+  ,
+  "about":{
+      "title":"NailsGestionApp",
+      "content1":"Welcome to NailsGestionApp, your all-in-one solution for managing nail",
+      "content2":"appointments and service costs! This software was designed to simplify",
+      "content3":"and optimize the experience for both nail salon owners and their",
+      "content4":"valuable clients.",
+      "descriptionTitle":"Description",
+      "descriptionContent1":"NailsGestionApp is an intuitive and user-friendly platform that allows",
+      "descriptionContent2":"you to efficiently manage nail appointments and service costs. Whether",
+      "descriptionContent3":"you manage a full-fledged salon or are an independent nail professional,",
+      "descriptionContent4":"NailsGestionApp is tailored to meet your needs and enhance the",
+      "descriptionContent5":"efficiency of your business operations.",
+      "keyFT":"Key Features",
+      "appointmentManagement":"Appointment Management:",
+      "appointmentText1":"Schedule appointments",
+      "appointmentText2":"effortlessly and visualize your agenda with ease. Automatic reminders", 
+      "appointmentText3":"will keep your clients informed and reduce no-shows.",
+      "serviceCosts":"Service Costs:",
+      "serviceText1":"Record and track the cost of each nail",
+      "serviceText2":"service to gain a clear insight into your income and expenses. This",
+      "serviceText3":"feature helps you make informed financial decisions.",
+      "clientProfiles":"Client Profiles:",
+      "clientText1":"Store detailed information about",
+      "clientText2":"each client, their preferences, and past services to provide",
+      "clientText3":"personalized service and enhance client satisfaction.",
+      "serviceHistory":"Service History:",
+      "serviceHistoryText1":"Easily access the service history of",
+      "serviceHistoryText2":"each client to ensure a consistent and tailored experience based on",
+      "serviceHistoryText3":"their needs."
+
+  },
+
+  
+  "customer": {
+    "title": "Site Policies",
+    "introduction": "Welcome to NailsGestionApp. Below you will find our site policies which include our user debugging policies and terms of use. Please read through these policies to understand how we manage user data and the rules governing the use of our site.",
+    "debuggingPoliciesTitle": "User Debugging Policies",
+    "debuggingPolicies": {
+      "intro": "Our application may collect certain user data for debugging purposes. This data helps us improve our service and address any issues that users may encounter. The following outlines our policies regarding user debugging:",
+      "dataCollection": "Data Collection: We may collect data related to user interactions and application performance to diagnose and resolve issues.",
+      "dataUsage": "Data Usage: The collected data is used solely for debugging and improving the application. It is not shared with third parties.",
+      "dataPrivacy": "Data Privacy: We take user privacy seriously and implement appropriate measures to ensure that collected data is securely stored and handled.",
+      "userConsent": "User Consent: By using our application, you consent to the collection and use of data for debugging purposes as described in this policy."
+    },
+    "termsOfUseTitle": "Terms of Use",
+    "termsOfUse": {
+      "intro": "By accessing or using NailsGestionApp, you agree to comply with the following terms:",
+      "acceptance": "Acceptance: By using our application, you agree to these terms and conditions. If you do not agree, please do not use our service.",
+      "modificationOfTerms": "Modification of Terms: We reserve the right to modify these terms at any time. Any changes will be effective immediately upon posting.",
+      "prohibitedUses": "Prohibited Uses: You agree not to use our application for any unlawful purposes or in a manner that could damage, disable, or impair our service.",
+      "limitationOfLiability": "Limitation of Liability: NailsGestionApp is not liable for any indirect, incidental, or consequential damages arising from the use of our application."
+    }
+  
+}
+
 
 
 }

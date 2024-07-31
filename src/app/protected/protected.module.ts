@@ -10,9 +10,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CustomerComponent } from './pages/customer/customer.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
-  declarations: [DashboardComponent, ProfileComponent, AboutComponent, CustomerComponent],
+  declarations: [DashboardComponent, ProfileComponent, AboutComponent, CustomerComponent, ContactComponent],
   imports: [
     CommonModule,
     ProtectedRoutingModule,

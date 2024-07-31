@@ -123,7 +123,21 @@
       "limitationOfLiability": "Limitation of Liability: NailsGestionApp is not liable for any indirect, incidental, or consequential damages arising from the use of our application."
     }
   
-}
+},
+
+
+  "contact": {
+    "title": "Contact Us",
+    "description": "We are here to help you book your next manicure appointment with ease. Feel free to reach out to us for any inquiries or assistance.",
+    "phoneTitle": "Phone",
+    "phoneNumber": "+1 (234) 567-8900",
+    "emailTitle": "Email",
+    "emailAddress": "info@nailsgestionapp.com",
+    "addressTitle": "Address",
+    "address": "123 Nail Street, Beauty City, BC 12345"
+  }
+
+
 
 
 

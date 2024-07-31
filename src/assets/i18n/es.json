@@ -120,8 +120,19 @@
       "prohibitedUses": "Usos Prohibidos: Aceptas no usar nuestra aplicación para ningún propósito ilegal o de manera que pueda dañar, deshabilitar o perjudicar nuestro servicio.",
       "limitationOfLiability": "Limitación de Responsabilidad: NailsGestionApp no es responsable de ningún daño indirecto, incidental o consecuente que surja del uso de nuestra aplicación."
     }
-  }
+  },
 
+
+  "contact": {
+    "title": "Contáctanos",
+    "description": "Estamos aquí para ayudarle a reservar su próxima cita de manicura con facilidad. No dude en comunicarse con nosotros para cualquier consulta o ayuda.",
+    "phoneTitle": "Phone",
+    "phoneNumber": "+1 (234) 567-8900",
+    "emailTitle": "Correo",
+    "emailAddress": "info@nailsgestionapp.com",
+    "addressTitle": "Address",
+    "address": "123 Nail Street, Beauty City, BC 12345"
+  }
 
 
 

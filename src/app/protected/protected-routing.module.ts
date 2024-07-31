@@ -5,6 +5,7 @@ import { CatalogueComponent } from './pages/arrangement/components/catalogue/cat
 import { ProfileComponent } from './pages/profile/profile.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CustomerComponent } from './pages/customer/customer.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,11 @@ const routes: Routes = [
           {
             path: 'customer',
             component: CustomerComponent,
+          },
+
+          {
+            path: 'contact',
+            component: ContactComponent,
           },
 
           {

@@ -47,7 +47,9 @@
           <a class="navbar-item" href="#">{{
             "navbar.appointments" | translate
           }}</a>
-          <a class="navbar-item"> {{ "navbar.contact" | translate }} </a>
+          <a [routerLink]="['/dashboard/contact']" class="navbar-item">
+            {{ "navbar.contact" | translate }}
+          </a>
           <hr class="navbar-divider" />
           <a class="navbar-item"> {{ "navbar.problem" | translate }} </a>
         </div>

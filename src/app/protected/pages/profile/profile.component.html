@@ -1,44 +1,42 @@
-<section class="hero is-light is-fullheight">
-  <div class="hero-body">
-    <div class="container">
-      <h3 class="title">{{ "profile.title" | translate }}</h3>
-      <div class="box">
-        <div class="field">
-          <label class="label">{{ "profile.email" | translate }}</label>
-          <div class="control">
-            <input class="input" type="text" [value]="user?.email" disabled />
-          </div>
+<section class="section">
+  <div class="container">
+    <h3 class="title">{{ "profile.title" | translate }}</h3>
+    <div class="box">
+      <div class="field">
+        <label class="label">{{ "profile.email" | translate }}</label>
+        <div class="control">
+          <input class="input" type="text" [value]="user?.email" disabled />
         </div>
+      </div>
 
-        <div class="field">
-          <label class="label">{{ "profile.displayName" | translate }}</label>
-          <div class="control">
-            <input
-              class="input"
-              type="text"
-              [value]="user?.displayName"
-              disabled
-            />
-          </div>
+      <div class="field">
+        <label class="label">{{ "profile.displayName" | translate }}</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            [value]="user?.displayName"
+            disabled
+          />
         </div>
+      </div>
 
-        <div class="field">
-          <label class="label">{{ "profile.photoURL" | translate }}</label>
-          <div class="control">
-            <img
-              *ngIf="user?.photoURL"
-              [src]="user.photoURL"
-              alt="Profile Photo"
-              class="image is-128x128"
-            />
-          </div>
+      <div class="field">
+        <label class="label">{{ "profile.photoURL" | translate }}</label>
+        <div class="control">
+          <img
+            *ngIf="user?.photoURL"
+            [src]="user.photoURL"
+            alt="Profile Photo"
+            class="image is-128x128"
+          />
         </div>
+      </div>
 
-        <div class="field" *ngIf="user?.phoneNumber">
-          <label class="label">{{ "profile.phone" | translate }}</label>
-          <div class="control">
-            <strong> {{ user.phoneNumber }}</strong>
-          </div>
+      <div class="field" *ngIf="user?.phoneNumber">
+        <label class="label">{{ "profile.phone" | translate }}</label>
+        <div class="control">
+          <strong> {{ user.phoneNumber }}</strong>
         </div>
       </div>
     </div>

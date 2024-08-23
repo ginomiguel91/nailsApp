@@ -38,33 +38,50 @@
               <label for="email" class="label">{{
                 "login.email" | translate
               }}</label>
-              <div class="control has-icons-left">
+              <div class="control has-icons-left has-icons-right">
                 <input
                   class="input"
                   type="email"
                   placeholder="example@yahoo.com"
                   formControlName="email"
+                  [ngClass]="errorField('email')"
                   required
                 />
                 <span class="icon is-small is-left">
                   <i class="fas fa-envelope"></i>
                 </span>
+                <span class="icon is-small is-right">
+                  <i [ngClass]="iconErrorsClassField('email')"></i>
+                </span>
               </div>
+              <p [ngClass]="msgErrorsClassField('email')">
+                {{ msgErrorValidation("email") }}
+              </p>
             </div>
 
             <div class="field">
               <label for="password" class="label">{{
                 "login.password" | translate
               }}</label>
-              <div class="control">
+              <div class="control has-icons-left has-icons-right">
                 <input
                   class="input"
                   type="password"
                   placeholder="******"
                   formControlName="password"
+                  [ngClass]="errorField('password')"
                   required
                 />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-key"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i [ngClass]="iconErrorsClassField('password')"></i>
+                </span>
               </div>
+              <p [ngClass]="msgErrorsClassField('password')">
+                {{ msgErrorValidation("password") }}
+              </p>
             </div>
 
             <div class="field">

@@ -38,7 +38,7 @@
   "placeholderUsername": "Enter your Username...",
   "placeholderPassword": "Enter your Password...",
   "access_error_title":"Login error",
-  "access_error_content":"User or password wrong!",
+  "access_error_content":"Email or password wrong!",
   "noAccount":"Don’t have an account yet?",
   "signInLink":"login"
 

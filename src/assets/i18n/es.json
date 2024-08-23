@@ -39,7 +39,7 @@
   "placeholderUsername": "Escriba su Usuario...",
   "placeholderPassword": "Escriba su Contraseña...",
   "access_error_title":"Error al ingresar",
-  "access_error_content":"¡Usuario o contraseña incorrectos!",
+  "access_error_content":"¡Correo o contraseña incorrectos!",
   "noAccount":"¿No tiene cuenta todavía?",
   "signInLink":"autenticarse"
  

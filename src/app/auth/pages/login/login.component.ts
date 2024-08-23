@@ -111,12 +111,13 @@ export class LoginComponent implements OnInit {
    * touched, it returns 'input is-danger', indicating an error state. Otherwise, it returns 'input
    * is-success', indicating a success state.
    */
-  // errorField(field: string): string {
-  //   const control = this.loginForm.get(field);
-  //   return control?.invalid && (control?.dirty || control?.touched)
-  //     ? 'input is-danger'
-  //     : 'input is-success';
-  // }
+  errorField(field: string): string {
+    const control = this.loginForm.get(field);
+    if (control?.touched || control?.dirty) {
+      return control.invalid ? 'input is-danger' : 'input is-success';
+    }
+    return 'input';
+  }
 
   /**
    * The function `msgErrorsClassField` returns a CSS class based on the error status of a given field.
@@ -128,13 +129,25 @@ export class LoginComponent implements OnInit {
    * the error field for the input is 'input is-danger', it will return 'help is-danger'. Otherwise, it
    * will return 'help is-success'.
    */
-  // msgErrorsClassField(field: string): string {
-  //   if (this.errorField(field) === 'input is-danger') {
-  //     return 'help is-danger';
-  //   } else {
-  //     return 'help is-success';
-  //   }
-  // }
+  msgErrorsClassField(field: string): string {
+    const control = this.loginForm.get(field);
+    if (control?.touched || control?.dirty) {
+      return control.invalid ? 'help is-danger' : 'help is-success';
+    }
+    return '';
+  }
+
+  /* The `iconErrorsClassField` function in the `LoginComponent` class is responsible for determining
+  the CSS class that should be applied to an icon element based on the error status of a specific
+  form control field. Here's a breakdown of what the function does: */
+  iconErrorsClassField(field: string): string {
+    const control = this.loginForm.get(field);
+    if (control?.touched || control?.dirty) {
+      return control.invalid ? 'fas fa-exclamation-triangle' : 'fas fa-check';
+    }
+    return '';
+  }
+
   /**
    * The function `msgErrorValidation` checks if a field is valid or invalid and returns a corresponding
    * message.
@@ -144,15 +157,17 @@ export class LoginComponent implements OnInit {
    * or invalid. If the error field for the given input is 'input is-danger', it returns '¡The field
    * [field] is invalid !'. Otherwise, it returns '¡The field [field] is valid !'.
    */
-  // msgErrorValidation(field: string): string {
-  //   const fieldInvalidKey = 'validation.field_invalid';
-  //   const fieldValidKey = 'validation.field_valid';
-  //   if (this.errorField(field) === 'input is-danger') {
-  //     return this.translate.instant(fieldInvalidKey, { field });
-  //   } else {
-  //     return this.translate.instant(fieldValidKey, { field });
-  //   }
-  // }
+  msgErrorValidation(field: string): string {
+    const control = this.loginForm.get(field);
+    const fieldInvalidKey = 'validation.field_invalid';
+    const fieldValidKey = 'validation.field_valid';
+    if (control?.touched || control?.dirty) {
+      return control.invalid
+        ? this.translate.instant(fieldInvalidKey, { field })
+        : this.translate.instant(fieldValidKey, { field });
+    }
+    return '';
+  }
 
   /**
    * The function `changeLanguage` in TypeScript changes the language used for translation and updates

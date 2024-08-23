@@ -8,7 +8,8 @@ import { Cookie } from 'ng2-cookies/ng2-cookies';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { GoogleAuthProvider, OAuthProvider } from '@angular/fire/auth';
-
+import Swal from 'sweetalert2';
+import { TranslateService } from '@ngx-translate/core';
 export interface Credential {
   email: string;
   password: string;
@@ -27,6 +28,7 @@ export class AuthService {
     private http: HttpClient,
     private firebaseAuthenticationService: AngularFireAuth,
     private router: Router,
+    private translate: TranslateService,
     private ngZone: NgZone
   ) {
     // OBSERVER save user in localStorage (log-in) and setting up null when log-out
@@ -153,7 +155,16 @@ export class AuthService {
         this.observeUserState();
       })
       .catch((error) => {
-        alert(error.message);
+        //alert(error.message);
+        this.translate
+          .get(['login.access_error_title', 'login.access_error_content'])
+          .subscribe((translations) => {
+            Swal.fire(
+              translations['login.access_error_title'],
+              translations['login.access_error_content'],
+              'error'
+            );
+          });
       });
   }
 

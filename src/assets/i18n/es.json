@@ -127,11 +127,8 @@
     "title": "Contáctanos",
     "description": "Estamos aquí para ayudarle a reservar su próxima cita de manicura con facilidad. No dude en comunicarse con nosotros para cualquier consulta o ayuda.",
     "phoneTitle": "Phone",
-    "phoneNumber": "+1 (234) 567-8900",
     "emailTitle": "Correo",
-    "emailAddress": "info@nailsgestionapp.com",
-    "addressTitle": "Address",
-    "address": "123 Nail Street, Beauty City, BC 12345"
+    "addressTitle": "Address"
   }
 
 

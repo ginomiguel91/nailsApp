@@ -10,4 +10,7 @@ export const environment = {
     appId: '1:742962383987:web:7ad1fe3c901cdda4146e06',
     measurementId: 'G-1ZQ1MJMMQ8',
   },
+  contactPhone: '+1 (234) 567-8900',
+  contactEmail: 'info@nailsgestionapp.com',
+  contactAddress: '123 Nail Street, Beauty City, BC 12345',
 };

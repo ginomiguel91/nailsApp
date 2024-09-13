@@ -2,6 +2,7 @@
 
 # Compiled output
 /dist
+!/dist/_redirects
 /tmp
 /out-tsc
 /bazel-out

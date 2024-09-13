@@ -1,0 +1,2 @@
+# Redirige las solicitudes de API a tu backend en EC2
+/api/*  http://18.117.237.205:8080/api/:splat  200

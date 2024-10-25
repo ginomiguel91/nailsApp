@@ -1,7 +1,7 @@
 /* dashboard.css */
 .section {
   padding: 1rem 1.5rem;
-  background-image: url("/assets/font.jpeg"); /* Ajusta el path a tu imagen */
+  background-image: url("/assets/font.jpg"); /* Ajusta el path a tu imagen */
   background-size: cover; /* Ajusta la imagen para cubrir toda la sección */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */

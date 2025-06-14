@@ -27,10 +27,13 @@
             "styles": [
               "node_modules/bulma/css/bulma.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/tiny-slider/dist/tiny-slider.css",
               "src/styles.css"
               
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/tiny-slider/dist/min/tiny-slider.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -1,5 +1,7 @@
 /* catalogue.component.css */
 .card {
+  border-radius: 0.75rem;
+  overflow: hidden;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -28,11 +30,67 @@
     padding: 1rem;
   }
 
-  .card .media .media-left {
-    display: none;
-  }
-
   .card .media .media-content {
     text-align: center;
+  }
+  ::ng-deep .tns-controls {
+    display: none !important;
+  }
+}
+@media (min-width: 1024px) {
+  .card.large {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  ::ng-deep .tns-controls {
+    display: flex !important;
+  }
+}
+.tns-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tns-controls button {
+  font-weight: bold;
+  font-family: inherit;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: #485fc7; /* Bulma's is-link */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tns-controls button:hover {
+  background-color: #3e4ec2; /* darker on hover */
+}
+
+.swipe-hint {
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 1rem;
+  animation: fade-in-out 3s ease-in-out infinite;
+}
+
+.swipe-hint img {
+  width: 80px;
+  height: auto;
+  opacity: 0.8;
+}
+
+/* animación suave */
+@keyframes fade-in-out {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-10px);
   }
 }

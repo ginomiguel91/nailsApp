@@ -1,67 +1,41 @@
-<div class="container">
-  <div class="section">
-    <div class="columns">
-      <div class="column has-text-centered">
-        <h1 class="title has-text-white">
-          {{ "catalogue.index" | translate }}
-        </h1>
-        <br />
-      </div>
-    </div>
-    <div
-      id="app"
-      class="columns is-multiline"
-      *ngIf="catalogue.length > 0; else noData"
-    >
-      <div
-        class="column is-12-mobile is-6-tablet is-4-desktop"
-        *ngFor="let item of catalogue"
-      >
-        <div class="card large">
-          <div class="card-image">
-            <figure class="image is-16by9">
-              <img src="assets/cat_image.jpeg" alt="Image" />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left">
-                <figure class="image is-48x48">
-                  <img
-                    src="assets/icons/success-green-check-mark-icon.webp"
-                    alt="Image"
-                  />
-                </figure>
-              </div>
-              <div class="media-content">
-                <p class="title is-4 no-padding">{{ item.description }}</p>
-                <p>
-                  <span class="title is-6">
-                    <a href="http://twitter.com/twitterid">
-                      {{ item.price | currency : "USD" }}
-                    </a>
-                  </span>
-                </p>
-                <p class="subtitle is-6">{{ item.description }}</p>
-              </div>
+<div *ngIf="catalogue.length > 0; else noData">
+  <div class="my-slider">
+    <div class="card-wrapper" *ngFor="let item of catalogue">
+      <div class="card large m-3">
+        <div class="card-image">
+          <figure class="image">
+            <img src="assets/cat_image.jpeg" alt="Image" />
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img
+                  src="assets/icons/success-green-check-mark-icon.webp"
+                  alt="Icon"
+                />
+              </figure>
             </div>
-            <div class="content">
-              <div class="background-icon">
-                <span class="icon-twitter"></span>
-              </div>
+            <div class="media-content">
+              <p class="title is-4 no-padding">{{ item.description }}</p>
+              <p class="title is-6 has-text-link">
+                {{ item.price | currency : "USD" }}
+              </p>
+              <p class="subtitle is-6">{{ item.description }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- No data template -->
-    <ng-template #noData>
-      <div class="column is-12 has-text-centered">
-        <div class="notification is-link">
-          <p>{{ "catalogue.noData" | translate }}</p>
-        </div>
-      </div>
-    </ng-template>
+  </div>
+  <div class="swipe-hint" *ngIf="isMobile">
+    <img src="assets/icons/swipe-hand.gif" alt="Swipe hint" />
   </div>
 </div>
+
+<ng-template #noData>
+  <div class="notification is-warning has-text-centered">
+    {{ "catalogue.noData" | translate }}
+  </div>
+</ng-template>

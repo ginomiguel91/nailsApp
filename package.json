@@ -34,6 +34,7 @@
     "ng2-cookies": "^1.0.12",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.6.13",
+    "tiny-slider": "^2.9.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
